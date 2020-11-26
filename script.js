@@ -19,7 +19,7 @@ function drawImage() {
 	ctx.fillStyle = '#000'
 	ctx.fillText(name.value, 60, 150,400);
 	ctx.fillText(summary.value, 200, 200, 300);
-	ctx.fillText(author.value, 120, 350);
+	ctx.fillText(author.value, 190, 350,280);
 	ctx.image(preview.value,200,200);
 	ctx.image(aimage.value,200,200);
 }
@@ -44,5 +44,14 @@ author.addEventListener('input', function () {
 })
 downloadBtn.addEventListener('click', function () {
 	downloadBtn.href = canvas.toDataURL('image/jpeg')
-	downloadBtn.download = 'BlogPost' + name.value
+	downloadBtn.download = 'BlogPost_' + name.value
 })
+window.addEventListener('load', function() {
+	document.querySelector('input[type="file"]').addEventListener('change', function() {
+		if (this.files && this.files[0]) {
+			var img = document.querySelector('img');  // $('img')[0]
+			img.src = URL.createObjectURL(this.files[0]); // set src to blob url
+			img.onload = imageIsLoaded;
+		}
+	});
+  });
