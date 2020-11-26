@@ -30,6 +30,6 @@ author.addEventListener('input', function () {
 	drawImage()
 })
 downloadBtn.addEventListener('click', function () {
-	downloadBtn.href = canvas.toDataURL('image/jpg')
-	downloadBtn.download = 'BlogPost ' + nameInput.value
+	downloadBtn.href = canvas.toDataURL('image/jpeg')
+	downloadBtn.download = 'BlogPost' + name.value
 })
