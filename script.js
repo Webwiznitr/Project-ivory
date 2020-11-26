@@ -20,7 +20,18 @@ function drawImage() {
 	ctx.fillText(name.value, 60, 150,400);
 	ctx.fillText(summary.value, 200, 200, 300);
 	ctx.fillText(author.value, 120, 350);
+	ctx.image(preview.value,200,200);
+	ctx.image(aimage.value,200,200);
 }
+
+
+aimage.addEventListener('input', function () {
+	drawImage()
+})
+
+preview.addEventListener('input', function () {
+	drawImage()
+})
 
 name.addEventListener('input', function () {
 	drawImage()
