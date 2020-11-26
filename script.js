@@ -3,6 +3,8 @@ const ctx = canvas.getContext('2d')
 const name = document.getElementById('name')
 const summary = document.getElementById('summary')
 const author = document.getElementById('author')
+const aimage = document.getElementById('aimage')
+const preview = document.getElementById('preview')
 const downloadBtn = document.getElementById('download-btn')
 
 const image = new Image()
