@@ -15,13 +15,20 @@ function drawImage() {
 	ctx.drawImage(image, 0, 0, canvas.width, canvas.height)
 	ctx.font = '40px monotype'
 	ctx.fillStyle = '#000'
-	ctx.fillText(name.value, 120, 150)
+	ctx.fillText(name.value, 60, 150,400);
+	ctx.fillText(summary.value, 200, 200, 300);
+	ctx.fillText(author.value, 120, 350);
 }
 
 name.addEventListener('input', function () {
 	drawImage()
 })
-
+summary.addEventListener('input', function () {
+	drawImage()
+})
+author.addEventListener('input', function () {
+	drawImage()
+})
 downloadBtn.addEventListener('click', function () {
 	downloadBtn.href = canvas.toDataURL('image/jpg')
 	downloadBtn.download = 'BlogPost ' + nameInput.value
