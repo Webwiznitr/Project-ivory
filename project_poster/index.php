@@ -144,7 +144,7 @@ if(isset($_POST['posttitle'])){
             <label for="AuthorImage">Upload Author's Image</label>
             <input type="file" name="AuthorImage" id="AuthorImage" placeholder="Upload Author's Image">
             <input type="submit" value="Generate poster">
-        </form>
+        </form><button type="submit" onclick="window.open('./certificate/<?php echo $file.'.jpg' ;?>')">Download Poster</button>
   </div>
 </div>
                       <br><br>
